@@ -5,10 +5,17 @@
 # puts rain.encode('utf-8')
 
 class Board
-    attr_accessor :board
+    attr_accessor :board, :players
     def initialize
         @board = Array.new(6) {Array.new(7, " ")}
+        @players = []
     end
+
+    def run
+
+    end
+
+    
 end
 
 a = Board.new
