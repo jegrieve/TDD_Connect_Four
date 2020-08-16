@@ -5,7 +5,7 @@ class Human
         @sym = sym
     end
 
-    def get_input
+    def get_input #convert input into array
        puts "enter input"
        input = gets.chomp
     end

@@ -26,7 +26,48 @@ describe Board do
         end
     end
 
-    # describe "#run" do
-    # it "" do
-    # end
+     describe "#win?" do
+
+        it "return false if no win conditions are not met" do
+            board = Board.new
+            expect(board.win?(:X)).to eql(false)
+        end
+
+        it "return true if there is a horizontal win" do
+            board = Board.new
+            board.place([0,0], :X)
+            board.place([0,1], :X)
+            board.place([0,2], :X)
+            board.place([0,3], :X)
+            expect(board.win?(:X)).to eql(true)
+        end
+
+        it "return true if there is a vertical win" do
+            board = Board.new
+            board.place([0,0], :X)
+            board.place([1,0], :X)
+            board.place([2,0], :X)
+            board.place([3,0], :X)
+            expect(board.win?(:X)).to eql(true)
+        end
+
+        it "return true if there is a right-to-left diagonal win" do
+            board = Board.new
+            board.place([0,6], :X)
+            board.place([1,5], :X)
+            board.place([2,4], :X)
+            board.place([3,3], :X)
+            p board
+            expect(board.win?(:X)).to eql(true)
+        end
+
+        it "return true if there is a left-to-right-diagonal win" do
+            board = Board.new
+            board.place([0,0], :X)
+            board.place([1,1], :X)
+            board.place([2,2], :X)
+            board.place([3,3], :X)
+            expect(board.win?(:X)).to eql(true)
+        end
+    end
 end
