@@ -13,10 +13,12 @@ describe Human do
     end
 end
 
-    # describe "#get_input" do 
-    #     it "it should take an input" do
-    #         human = Human.new("Jack", "X")
-    #         expect(human.get_input).to eql("test")
-    #     end
-    # end
+    #  describe "#get_input" do 
+    #      it "it should return an array of 2 integer values" do
+    #          human = Human.new("Jack", "X")
+    #          expect(human.get_input).to eql([1, 2])
+    #      end
+    #  end
+    
+    
 end
